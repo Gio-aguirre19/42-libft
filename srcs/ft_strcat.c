@@ -6,11 +6,11 @@
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 22:49:51 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/06/25 14:35:46 by gaguirre         ###   ########.fr       */
+/*   Updated: 2017/06/25 16:29:14 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat (char *dest, const char *src)
+char	*ft_strcat(char *dest, const char *src)
 {
 	char *start;
 

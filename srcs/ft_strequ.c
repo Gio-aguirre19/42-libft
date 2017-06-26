@@ -6,7 +6,7 @@
 /*   By: gaguirre <gaguirre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/25 13:25:08 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/06/25 13:27:22 by gaguirre         ###   ########.fr       */
+/*   Updated: 2017/06/25 16:28:09 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@ int		ft_strequ(char const *s1, char const *s2)
 	int i;
 
 	i = 0;
-  if (!s1 || !s2)
-    return (0);
+	if (!s1 || !s2)
+		return (0);
 	while (s1[i] || s2[i])
 	{
 		if (s1[i] != s2[i])

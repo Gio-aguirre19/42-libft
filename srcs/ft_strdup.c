@@ -6,7 +6,7 @@
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 20:03:18 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/06/25 15:20:44 by gaguirre         ###   ########.fr       */
+/*   Updated: 2017/06/25 16:26:11 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int i;
-	char *result;
+	int		i;
+	char	*result;
 
 	i = 0;
 	while (s1[i])
@@ -30,7 +30,6 @@ char	*ft_strdup(const char *s1)
 		result[i] = s1[i];
 		i++;
 	}
-
 	result[i] = '\0';
-	return(result);
+	return (result);
 }
