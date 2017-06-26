@@ -6,7 +6,7 @@
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 20:51:56 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/06/25 14:57:46 by gaguirre         ###   ########.fr       */
+/*   Updated: 2017/06/25 18:33:42 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,5 @@ void	ft_putnbr(int n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 #endif
