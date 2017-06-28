@@ -6,7 +6,7 @@
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 20:51:56 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/06/25 18:33:42 by gaguirre         ###   ########.fr       */
+/*   Updated: 2017/06/25 19:41:55 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_isalnum(int x);
 int		ft_isalpha(int x);
@@ -64,4 +71,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void const *content, size_t content_size);
 #endif
