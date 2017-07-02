@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gaguirre <gaguirre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/25 12:49:24 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/06/25 13:52:28 by gaguirre         ###   ########.fr       */
+/*   Created: 2017/07/01 20:27:31 by gaguirre          #+#    #+#             */
+/*   Updated: 2017/07/01 20:32:08 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
-void	*ft_memchr(const void *s, int c, size_t n)
+int		ft_countwords(char const *str, char c)
 {
-	unsigned char *str;
-	unsigned char chr;
+	int i;
+	int count;
 
-	str = (unsigned char *)s;
-	chr = (unsigned char)c;
-	while (n--)
+	i = 0;
+	count = 0;
+	while (str[i])
 	{
-		if (*str++ == chr)
-			return ((void *)str - 1);
+		while (str[i] == c)
+			i++;
+		if (str[i] != c && str[i])
+			count++;
+		while (str[i] != c && str[i])
+			i++;
 	}
-	return (0);
+	return (count);
 }
