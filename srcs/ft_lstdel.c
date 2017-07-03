@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/30 20:18:59 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/07/01 22:41:23 by gaguirre         ###   ########.fr       */
+/*   Created: 2017/07/01 23:00:11 by gaguirre          #+#    #+#             */
+/*   Updated: 2017/07/01 23:15:04 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
 {
-	char	*str;
-	char	*start;
-
-	if (!s1 || !s2)
-		return (NULL);
-	if (!(str = (char *)malloc(sizeof(char) *
-					(ft_strlen((char *)s1) + ft_strlen((char *)s2)) + 1)))
-		return (NULL);
-	start = str;
-	while (*s1)
-		*str++ = *s1++;
-	while (*s2)
-		*str++ = *s2++;
-	*str++ = '\0';
-	return (start);
+	if ((*alst)->next)
+		ft_lstdel(&(*alst)->next, del);
+	ft_lstdelone(alst, del);
 }

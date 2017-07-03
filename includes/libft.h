@@ -6,7 +6,7 @@
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 20:51:56 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/07/01 21:08:02 by gaguirre         ###   ########.fr       */
+/*   Updated: 2017/07/01 23:18:22 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,8 @@ char				*ft_strjoin(char const*s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
+void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
+void				ft_lstadd(t_list **alst, t_list *new);
 int					ft_countwords(char const *str, char c);
 #endif
