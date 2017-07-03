@@ -6,7 +6,7 @@
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 20:51:56 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/07/01 23:18:22 by gaguirre         ###   ########.fr       */
+/*   Updated: 2017/07/02 20:54:55 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_atoi(const char *str);
 char				*ft_strrchr(const char *str, int n);
-int					ft_strlen(const char *string);
+size_t				ft_strlen(const char *string);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
 int					ft_tolower(int x);
@@ -75,9 +75,15 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 char				*ft_strjoin(char const*s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
+size_t				ft_intlen(int n);
 char				*ft_itoa(int n);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 int					ft_countwords(char const *str, char c);
+void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int					ft_lstsize(t_list *lst);
+void				ft_lstprint(t_list *lst);
+void				ft_swap(void *a, void *b, size_t s);
 #endif

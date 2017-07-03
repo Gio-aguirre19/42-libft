@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/01 23:00:11 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/07/02 19:21:37 by gaguirre         ###   ########.fr       */
+/*   Created: 2017/07/02 19:35:42 by gaguirre          #+#    #+#             */
+/*   Updated: 2017/07/02 20:11:01 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
+void	ft_swap(void *a, void *b, size_t s)
 {
-	if ((*alst)->next)
-		ft_lstdel(&(*alst)->next, del);
-	ft_lstdelone(alst, del);
+	void *tmp;
+
+	tmp = malloc(s);
+	ft_memcpy(tmp, a, s);
+	ft_memcpy(a, b, s);
+	ft_memcpy(b, tmp, s);
+	free(tmp);
 }

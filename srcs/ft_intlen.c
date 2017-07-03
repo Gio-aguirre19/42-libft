@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/01 23:00:11 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/07/02 19:21:37 by gaguirre         ###   ########.fr       */
+/*   Created: 2017/07/02 20:16:57 by gaguirre          #+#    #+#             */
+/*   Updated: 2017/07/02 20:34:10 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
+size_t	ft_intlen(int n)
 {
-	if ((*alst)->next)
-		ft_lstdel(&(*alst)->next, del);
-	ft_lstdelone(alst, del);
+	size_t i;
+
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
 }

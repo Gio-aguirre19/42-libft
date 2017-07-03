@@ -6,21 +6,11 @@
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 16:34:38 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/07/01 21:51:01 by gaguirre         ###   ########.fr       */
+/*   Updated: 2017/07/02 20:19:19 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-static size_t		intlen(int n)
-{
-	size_t			i;
-
-	i = 1;
-	while (n /= 10)
-		i++;
-	return (i);
-}
 
 char				*ft_itoa(int n)
 {
@@ -28,7 +18,7 @@ char				*ft_itoa(int n)
 	size_t			len;
 	unsigned int	n_cpy;
 
-	len = intlen(n);
+	len = ft_intlen(n);
 	n_cpy = n;
 	if (n < 0)
 	{

@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/01 23:00:11 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/07/02 19:21:37 by gaguirre         ###   ########.fr       */
+/*   Created: 2017/07/02 20:45:50 by gaguirre          #+#    #+#             */
+/*   Updated: 2017/07/02 20:58:40 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
+void	ft_lstprint(t_list *lst)
 {
-	if ((*alst)->next)
-		ft_lstdel(&(*alst)->next, del);
-	ft_lstdelone(alst, del);
+	t_list *node;
+
+	if (!lst)
+		return ;
+	node = lst;
+	while (node)
+	{
+		ft_putstr((char *)node->content);
+		ft_putchar('\n');
+		node = node->next;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: gaguirre <gaguirre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/25 13:35:17 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/06/25 16:16:40 by gaguirre         ###   ########.fr       */
+/*   Updated: 2017/07/02 21:14:50 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ void	ft_putnbr(int n)
 
 	count = n;
 	if (count == -2147483648)
+	{
 		ft_putstr("-2147483648");
+		return ;
+	}
 	if (count < 0)
 	{
 		ft_putchar('-');

@@ -6,7 +6,7 @@
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 23:17:29 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/07/01 23:18:58 by gaguirre         ###   ########.fr       */
+/*   Updated: 2017/07/02 18:13:16 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-
+	new->next = *alst;
+	*alst = new;
 }

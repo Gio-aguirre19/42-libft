@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaguirre <gio_aguirre19@yahoo.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/01 23:00:11 by gaguirre          #+#    #+#             */
-/*   Updated: 2017/07/02 19:21:37 by gaguirre         ###   ########.fr       */
+/*   Created: 2017/07/02 20:35:26 by gaguirre          #+#    #+#             */
+/*   Updated: 2017/07/02 20:57:15 by gaguirre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
+int			ft_lstsize(t_list *lst)
 {
-	if ((*alst)->next)
-		ft_lstdel(&(*alst)->next, del);
-	ft_lstdelone(alst, del);
+	int		i;
+	t_list	*node;
+
+	i = 0;
+	node = lst;
+	while (node)
+	{
+		node = node->next;
+		i++;
+	}
+	return (i);
 }
